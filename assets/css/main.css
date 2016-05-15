@@ -2955,7 +2955,7 @@
                 }
 
 		.wrapper.style1 {
-			background-color: #a4c2ef;
+			background-color: #6d8ab5; /* CHANGE: a4c2ef*/
 			color: #ffffff;
 		}
 
@@ -5029,6 +5029,7 @@
 	#banner {
 		background-color: #333a45;
 		color: #95accf;
+        font-weight: bold;
 		background-image: -moz-linear-gradient(top, rgba(166,148,232,0.25), rgba(102,143,193,0.35)), -moz-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(166,148,232,0.25), rgba(102,143,193,0.35)), -webkit-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(166,148,232,0.25), rgba(102,143,193,0.35)), -ms-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../../images/banner.jpg");
@@ -5068,7 +5069,8 @@
 			#banner input[type="button"]:hover,
 			#banner button:hover,
 			#banner .button:hover {
-				background-color: rgba(255, 255, 255, 0.075);
+				background-color: rgba(149, 172, 207, .8);
+                color: #ffffff !important;
 			}
 
 			#banner input[type="submit"]:active,
