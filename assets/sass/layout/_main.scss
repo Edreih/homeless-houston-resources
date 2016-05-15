@@ -1,0 +1,60 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Main */
+
+	#main {
+		> header {
+			@include padding(10em, 0);
+			@include vendor(
+				'background-image',
+				(
+					'linear-gradient(top, rgba(166,148,232,0.25), rgba(102,143,193,0.35))',
+					'linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75))',
+					'url("../../images/banner.jpg")'
+				)
+			);
+			background-attachment: fixed, fixed, fixed;
+			background-position: center 100%, center 100%, center 100%;
+			background-repeat: repeat, repeat, no-repeat;
+			background-size: cover, cover, cover;
+			color: _palette(accent1, fg-bold);
+			text-align: center;
+
+			h1, h2, h3, h4, h5 {
+				color: _palette(accent1, fg-bold);
+			}
+
+			@include breakpoint(large) {
+				@include padding(8em, 3em);
+			}
+
+			@include breakpoint(medium) {
+				@include padding(10em, 3em);
+			}
+
+			@include breakpoint(small) {
+				@include padding(5em, 3em);
+
+				h2 {
+					font-size: 1.25em;
+					margin: 0 0 (_size(element-margin) * 0.5) 0;
+				}
+			}
+		}
+	}
+
+	body.is-mobile {
+		#main {
+			> header {
+				background-attachment: scroll;
+			}
+		}
+	}

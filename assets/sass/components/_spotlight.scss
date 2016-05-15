@@ -1,0 +1,69 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Spotlight */
+
+	.spotlight {
+		@include vendor('align-items', 'center');
+		@include vendor('display', 'flex');
+		@include vendor('justify-content', 'space-between');
+
+		.image, article, object {
+			width: 45%
+		}
+
+		object {
+			margin-bottom: _size(element-margin);
+		}
+
+		&.left {
+			@include vendor('flex-direction', 'row');
+		}
+
+		&.right {
+			@include vendor('flex-direction', 'row-reverse');
+		}
+
+		@include breakpoint(medium) {
+			@include vendor('flex-direction', 'row');
+			@include vendor('flex-wrap', 'wrap');
+			@include vendor('justify-content', 'center');
+
+			.image, object {
+				width: 80%;
+			}
+
+			article {
+				text-align: center;
+				width: 100%;
+
+				ul {
+					&.checklist {
+						display: inline-block;
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(small) {
+
+			.image {
+				width: auto;
+			}
+		}
+
+		@include breakpoint(xsmall) {
+
+			object {
+				width: 100%;
+			}
+		}
+	}

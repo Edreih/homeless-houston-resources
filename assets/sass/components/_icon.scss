@@ -1,0 +1,37 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+	}
+
+	@mixin color-icon($p: null) {
+		.icon {
+			&.alt {
+				&:before {
+					color: _palette($p, bg);
+					text-shadow: 1px 0px 0px _palette($p, fg-bold),
+								-1px 0px 0px _palette($p, fg-bold),
+								0px 1px 0px _palette($p, fg-bold),
+								0px -1px 0px _palette($p, fg-bold);
+				}
+			}
+		}
+	}
+
+	@include color-icon;

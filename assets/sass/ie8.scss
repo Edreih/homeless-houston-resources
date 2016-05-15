@@ -1,0 +1,72 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Optics by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/* Basic */
+
+	object {
+		display: none;
+	}
+
+/* List */
+
+	ul {
+		&.icons {
+			&.major {
+				> li {
+					> .icon {
+						position: relative;
+						-ms-behavior: url('assets/js/ie/PIE.htc');
+					}
+				}
+			}
+		}
+	}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		border: solid (_size(border-width) * 2);
+	}
+
+/* Banner */
+
+	#banner {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+	}
+
+/* Main */
+
+	#main {
+		> header {
+			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+		}
+	}
+
+/* Nav */
+
+	#nav {
+		> ul {
+			&.links {
+				> li {
+					border-top: solid 1px;
+					line-height: 3.5em;
+
+					&:first-child {
+						border-top: 0;
+					}
+				}
+			}
+		}
+	}

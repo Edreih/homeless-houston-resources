@@ -1,0 +1,61 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Wrapper */
+
+	.wrapper {
+		@include padding(6em, 0);
+		position: relative;
+
+		> .inner {
+			margin: 0 auto;
+			width: 60em;
+		}
+
+		&.style1 {
+			@include color(accent1);
+		}
+
+		&.style2 {
+			@include color(accent2);
+		}
+
+		&.style3 {
+			@include color(accent3);
+		}
+
+		&.style4 {
+			@include color(accent4);
+		}
+
+		&.style5 {
+			@include color(accent5);
+		}
+
+		@include breakpoint(medium) {
+			@include padding(5em, 3em);
+
+			> .inner {
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(small) {
+			@include padding(3em, 2em);
+		}
+
+		@include breakpoint(xsmall) {
+			@include padding(2em, 2em);
+		}
+
+		@include breakpoint(xxsmall) {
+			@include padding(2em, 1.25em);
+		}
+	}

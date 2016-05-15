@@ -1,0 +1,91 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Section/Article */
+
+	section, article, header {
+		&.special {
+			text-align: center;
+		}
+	}
+
+	header {
+		p {
+			position: relative;
+			margin: 0 0 (_size(element-margin) * 0.75) 0;
+		}
+
+		h2 + p {
+			font-size: 1.25em;
+			margin-top: (_size(element-margin) * -0.4);
+		}
+
+		h3 + p {
+			font-size: 1.1em;
+			margin-top: (_size(element-margin) * -0.3);
+		}
+
+		h4 + p,
+		h5 + p,
+		h6 + p {
+			font-size: 0.9em;
+			margin-top: (_size(element-margin) * -0.15);
+		}
+
+		small {
+			display: block;
+			font-size: 0.85em;
+			font-family: _font(family-header);
+			font-weight: _font(weight-header-bold);
+			letter-spacing: _font(letter-spacing);
+			margin-bottom: 0.3em;
+			text-transform: uppercase;
+		}
+
+		&.major {
+			margin-bottom: (_size(element-margin) * 3);
+		}
+
+		&.narrow {
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@include breakpoint(medium) {
+			&.major {
+				margin-bottom: (_size(element-margin) * 2.5);
+			}
+
+			&.narrow {
+				width: auto;
+			}
+		}
+
+		@include breakpoint(small) {
+			h2 + p {
+				font-size: 1em;
+			}
+
+			h3 + p {
+				font-size: 1em;
+			}
+
+			&.major {
+				margin-bottom: (_size(element-margin) * 1.5);
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			&.major {
+				margin-bottom: _size(element-margin);
+			}
+		}
+	}

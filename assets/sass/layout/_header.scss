@@ -1,0 +1,143 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Optics by Pixelarity
+/// pixelarity.com @pixelarity
+/// License: pixelarity.com/license
+///
+
+/* Header */
+
+	body {
+		padding-top: 3.5em;
+
+		&.landing {
+			padding-top: 0;
+		}
+
+		@include breakpoint(medium) {
+			padding-top: 44px;
+		}
+	}
+
+	#header {
+		@include vendor('transition', 'background-color #{_duration(transition) * 3} ease-in-out');
+		background-color: darken(_palette(accent2, bg), 12);
+		background-color: transparentize(darken(_palette(accent2, bg), 12), 0.025);
+		color: _palette(accent2, fg);
+		cursor: default;
+		font-weight: _font(weight-bold);
+		height: 3.5em;
+		left: 0;
+		line-height: 3.65em;
+		position: fixed;
+		text-align: right;
+		text-transform: uppercase;
+		top: 0;
+		width: 100%;
+		z-index: _misc(z-index-base) + 1;
+
+		> h1 {
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+			color: _palette(accent2, fg-bold);
+			display: inline-block;
+			font-weight: _font(weight-extra-bold);
+			height: inherit;
+			left: 0;
+			line-height: inherit;
+			margin: 0 0 0 1.5em;
+			padding: 0;
+			position: absolute;
+			top: 0;
+
+			a {
+				padding: 0 !important;
+				font-weight: inherit;
+			}
+
+			span {
+				font-weight: _font(weight-bold);
+			}
+		}
+
+		a {
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+			color: inherit;
+			display: inline-block;
+			text-decoration: none;
+			font-weight: _font(weight-bold);
+			letter-spacing: _font(letter-spacing);
+
+			&:hover {
+				color: _palette(accent2, fg-bold);
+			}
+
+			&[href="#nav"] {
+				@include icon;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				padding: 0 0.75em 0;
+
+				&:before {
+					content: '\f0c9';
+					margin: 0 0.5em 0 0;
+				}
+			}
+
+			&:last-child {
+				padding-right: 1.5em;
+			}
+		}
+
+		&.alt {
+			position: fixed;
+			background-color: transparent;
+			color: #95accf;
+
+			> h1 {
+				color: inherit;
+			}
+		}
+
+		@include breakpoint(medium) {
+			a {
+				&[href="#nav"] {
+					> span {
+						display: none;
+					}
+
+					&:before {
+						margin: 0;
+					}
+				}
+			}
+
+			&.alt {
+				position: absolute;
+			}
+		}
+
+		@include breakpoint(small) {
+			height: 3em;
+			line-height: 3.125em;
+
+			> h1 {
+				margin-left: 1em;
+
+				a {
+					font-size: 0.8em;
+				}
+			}
+
+			a {
+				&[href="#nav"] {
+					padding: 0 1em !important;
+				}
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			min-width: 320px;
+		}
+	}

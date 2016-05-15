@@ -1,0 +1,103 @@
+/*
+	Optics by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+/* Icon */
+
+	.icon.alt:before {
+		color: inherit !important;
+	}
+
+/* List */
+
+	ul.icons.major {
+		text-align: center;
+	}
+
+		ul.icons.major > li {
+			display: inline-block;
+			width: 33%;
+		}
+
+			ul.icons.major > li > .icon {
+				display: inline-block;
+			}
+
+	ul.labeled-icons > li {
+		display: inline-block;
+	}
+
+/* Features */
+
+	.features ul, .features object, .features .image {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+	}
+
+/* Spotlight */
+
+	.spotlight .image, .spotlight article, .spotlight object {
+		float: left;
+		margin: 0 3em 0 0;
+	}
+
+	.spotlight:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+/* Banner */
+
+	#banner {
+		background-image: url("../../images/banner.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		#banner:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: transparent;
+			background-image: url("images/ie/overlay.png");
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			opacity: 1;
+		}
+
+/* Main */
+
+	#main > header {
+		position: relative;
+		background-image: url("../../images/banner.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+		#main > header:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: transparent;
+			background-image: url("images/ie/overlay.png");
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			opacity: 1;
+		}
+
+		#main > header > * {
+			position: relative;
+			z-index: 1;
+		}
